@@ -85,13 +85,12 @@ noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 set relativenumber
-
 set smarttab
 set cindent
 set tabstop=4
 set shiftwidth=4
-" always uses spaces instead of tab characters
 set expandtab
+set scrolloff=10
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
