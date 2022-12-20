@@ -13,7 +13,6 @@ Plug 'bluz71/vim-mistfly-statusline'
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
 " Theme
-"Plug 'patstockwell/vim-monokai-tasty'
 Plug 'marko-cerovac/material.nvim'
 
 " React syntax highlighting
@@ -25,12 +24,17 @@ Plug 'ryanoasis/vim-devicons'
 " Initialize plugin system
 call plug#end()
 
-set termguicolors
+" Theme config
+set termguicolors " If you're using a Mac, you need to download iTerm2 for this theme to work
 let g:material_style = 'deep ocean'
 colorscheme material 
 
 inoremap jk <ESC>
+
+" NERDTree open/close command
 nmap <silent> <C-n> :NERDTreeToggle<CR>
+
+" Comment/uncomment lines using ++
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
@@ -38,7 +42,7 @@ nmap ++ <plug>NERDCommenterToggle
 autocmd VimEnter * NERDTree | wincmd p
 let NERDTreeCustomOpenArgs={'file':{'where': 't'}}
 
-" close Nerdtree automatically if it is the last buffer open
+" close NERDTree automatically if it is the last buffer open
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " nerdtree-git-plugin config
@@ -64,9 +68,6 @@ let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
 
 " vim-prettier
-"let g:prettier#quickfix_enabled = 0
-"let g:prettier#quickfix_auto_focus = 0
-" prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
