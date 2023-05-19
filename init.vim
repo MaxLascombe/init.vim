@@ -12,6 +12,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'bluz71/vim-mistfly-statusline'
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
+Plug 'github/copilot.vim'
+
 " Theme
 Plug 'marko-cerovac/material.nvim'
 
