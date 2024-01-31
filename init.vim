@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
@@ -67,6 +68,9 @@ let g:NERDTreeIgnore = ['^node_modules$']
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
+
+" vim-prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
