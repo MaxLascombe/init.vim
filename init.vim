@@ -3,14 +3,15 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'scrooloose/nerdcommenter'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'bluz71/vim-mistfly-statusline'
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
+Plug 'github/copilot.vim'
 
 " Copilot
 " For some reason, requires node 16 or 17 on apple silicon
