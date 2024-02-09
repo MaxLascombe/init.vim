@@ -11,8 +11,11 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'bluz71/vim-mistfly-statusline'
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
-
 Plug 'github/copilot.vim'
+
+" Copilot
+" For some reason, requires node 16 or 17 on apple silicon
+let g:copilot_node_command = "/opt/homebrew/opt/node@16/bin/node"  
 
 " Theme
 Plug 'marko-cerovac/material.nvim'
@@ -75,9 +78,11 @@ let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 let g:prettier#config#semi = 'false'
 let g:prettier#config#single_quote = 'true'
-let g:prettier#config#jsx_single_quote = 'true'
-let g:prettier#config#jsx_bracket_same_line = 'true'
 let g:prettier#config#arrow_parens = 'avoid'
+let g:prettier#config#jsx_bracket_same_line = 'true'
+let g:prettier#config#jsx_single_quote = 'true'
+let g:prettier#config#prose_wrap = 'always'
+let g:prettier#config#tab_width = 2
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
