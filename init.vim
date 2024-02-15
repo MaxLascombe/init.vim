@@ -15,6 +15,7 @@ Plug 'github/copilot.vim'
 
 " Copilot
 " For some reason, requires node 16 or 17 on apple silicon
+let g:copilot_enabled = 1
 let g:copilot_node_command = "/opt/homebrew/opt/node@16/bin/node"  
 
 " Theme
