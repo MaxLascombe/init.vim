@@ -9,7 +9,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'bluz71/vim-mistfly-statusline'
+Plug 'bluz71/nvim-linefly'
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 Plug 'github/copilot.vim'
 
