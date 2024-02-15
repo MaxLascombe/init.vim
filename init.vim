@@ -14,9 +14,11 @@ Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 Plug 'github/copilot.vim'
 
 " Copilot
-" For some reason, requires node 16 or 17 on apple silicon
 let g:copilot_enabled = 1
-let g:copilot_node_command = "/opt/homebrew/opt/node@16/bin/node"  
+" Copilot not working until panel is opened once, so let's open it
+" automatically
+autocmd VimEnter * Copilot panel
+autocmd VimEnter * q!
 
 " Theme
 Plug 'marko-cerovac/material.nvim'
