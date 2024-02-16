@@ -11,14 +11,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'bluz71/nvim-linefly'
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
-Plug 'github/copilot.vim'
-
-" Copilot
-let g:copilot_enabled = 1
-" Copilot not working until panel is opened once, so let's open it
-" automatically
-autocmd VimEnter * Copilot panel
-autocmd VimEnter * q!
 
 " Theme
 Plug 'marko-cerovac/material.nvim'
@@ -28,6 +20,8 @@ Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 
 Plug 'ryanoasis/vim-devicons'
+
+Plug 'github/copilot.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -88,7 +82,7 @@ let g:prettier#config#prose_wrap = 'always'
 let g:prettier#config#tab_width = 2
 
 " ctrlp
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
@@ -248,3 +242,11 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+" Copilot
+let g:copilot_enabled = 1
+" Copilot not working until panel is opened once, so let's open it
+" automatically
+autocmd VimEnter * Copilot panel
+autocmd VimEnter * q!
+
