@@ -249,4 +249,3 @@ let g:copilot_enabled = 1
 " automatically
 autocmd VimEnter * Copilot panel
 autocmd VimEnter * q!
-
